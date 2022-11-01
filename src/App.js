@@ -1,26 +1,34 @@
-import React, { useState } from 'react'
-import { createPortal } from 'react-dom'
-import Modal from './components/Modal'
+import React from 'react'
+// import { Routes, Route } from 'react-router-dom'
+// import About from './components/About'
+// import Home from './components/Home'
+ import Nav from './components/Nav'
+// import Register from './components/Register'
+// import PageNotFound  from './components/PageNotFound'
+// import Users from './components/Users'
+// import UserDetail from './components/UserDetail'
+import Router from './components/Router'
+
 
 const App = () => {
-  const[open, setOpen] = useState(false)
+   
+    
   return (
     <>
-    <h1>Welcome to this App</h1>
-      <button onClick={() => setOpen(true)}>Open Modal</button>
-      {
-        createPortal(
-          <Modal open={open} setOpen={setOpen} closeOnClick>
-        <h1>A modal Demo</h1>
-        <button onClick={() => setOpen(false)}>Close modal</button>
-      </Modal>,
-      document.getElementById("modal")
-        )
-      }
-      
+    <Nav/>
+      {/* <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/about" element={<About/>}/>
+        <Route path="/register" element={<Register/>}/>
+        <Route path="/users" element={<Users/>}>
+        <Route path=":userId" element={<UserDetail/>}/>
+        </Route>
+        <Route path="*" element={<PageNotFound/>}/>
+
+      </Routes> */}
+      <Router/>
     </>
-  )
-}
+  );
+};
 
 export default App
-

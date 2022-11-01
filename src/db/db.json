@@ -1,0 +1,28 @@
+{
+    "posts": [
+        {
+            "id":1,
+            "author": "Dee",
+            "title": "HTML",
+            "body": "How to maintain Life"
+        },
+        {
+            "id":2,
+            "author": "Ade",
+            "title": "Understanding Life",
+            "body": "Read the Bible"
+        }
+    ],
+    "comments": [
+        {
+            
+                "id":1,
+                "postId": "Ade",
+                "comments": "Understanding Life"
+        
+            }
+        
+    ]
+    
+    
+}
